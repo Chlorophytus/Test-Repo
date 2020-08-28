@@ -1,24 +1,19 @@
-#ifndef TEST_HEADER
-#define TEST_HEADER
-
+#pragma once
 namespace TestProgram {
+    class Test {
+        // All fields in a `class` are presumed private -RJM
+    protected:
+        // The above is overridden by `protected` and `public` labels -RJM
 
-	class Test {
-	private:
-	
-	
-	
-	protected:
+        // You can not call a protected method inside global namespace. -RJM
 
-		virtual void doThing();
+        // Also, you can "pure" virtual functions to indicate that they
+        //  shall not be called except by their children's overrides -RJM
+        virtual void doThing() = 0;
 
-	public:
-	
-		Test();
-		~Test();
+    public:
+        Test();
 
-	};
-
+        ~Test();
+    };
 }
-
-#endif

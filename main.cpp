@@ -1,3 +1,4 @@
+#include "test.hpp"
 #include "another.hpp"
 
 using namespace TestProgram;
